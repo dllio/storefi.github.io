@@ -1,0 +1,373 @@
+@charset "UTF-8";
+//-----------------------------------------------------
+// mixins.scss 全局功能方法样式
+// - Version: 1.0.0
+// - Author: 王超
+// - Date: 2018-03-02
+//-----------------------------------------------------
+
+
+//清除浮动
+@mixin clearfix {
+  &::after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: ".";
+    clear: both;
+    height: 0;
+    overflow: hidden;
+  }
+}
+
+//普通flex布局
+@mixin pubFlex {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+}
+
+@mixin autoFlex {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+}
+
+//宽度自动伸缩
+//控制元素绝对居中
+@mixin a_center {
+  display: -webkit-box;
+  -webkit-box-align: center;
+  -webkit-box-pack: center;
+}
+
+//单行文字溢出用点显示
+@mixin oneline_text {
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+//英文数字字体
+@mixin numAndEnFamily {
+  font-family: $fontArial
+}
+
+//鼠标按下效果
+@mixin btnActive {
+  cursor: pointer;
+  &:active {
+    opacity: .83;
+    outline: none;
+  }
+}
+
+//鼠标按下效果 颜色值也会变
+@mixin button-style($active-color) {
+  &:active {
+    background-color: darken($active-color, 10%);
+  }
+}
+
+//灰色间隔
+@mixin grayHr($h:.2rem,$bg:#f5f5f5) {
+  height: $h;
+  background: $bg;
+  clear: both;
+  width: 100%;
+  display: block;
+  text-indent: -9999px;
+}
+
+//1像素上下边框
+@mixin borde1px($status:bottom,$seesaw:bottom,$bdColor:#e6e6e6,$sty:solid,$positionSize:relative,$seesawValue:0) {
+  position: $positionSize;
+  &::after {
+    @include pseudo-Element;
+    left: 0;
+    right: 0;
+    border-#{$status}: 1px #{$sty} $bdColor;
+    #{$seesaw}: $seesawValue;
+    clear: both;
+    -webkit-transform-origin: 100%;
+    transform-origin: 100%;
+    //假如是左和右加边框时样式
+    @if($status == top){
+      -webkit-transform-origin: 100% top;
+      transform-origin: 100% top;
+    }
+
+    @if($status == left) or ($status == right){
+      width: 1px;
+      -webkit-transform: scaleX(0.5);
+      transform: scaleX(0.5);
+      /* Retina 适配 */
+      @media only screen and (-webkit-min-device-pixel-ratio: 2.0),
+      only screen and (min--moz-device-pixel-ratio: 2.0),
+      only screen and (-o-min-device-pixel-ratio: 200/100),
+      only screen and (min-device-pixel-ratio: 2.0) {
+        &{
+          -webkit-transform: scaleX(0.5);
+          transform: scaleX(0.5);
+        }
+      }
+      /* 三倍屏 适配 */
+      @media only screen and (-webkit-min-device-pixel-ratio: 2.5),
+      only screen and (min--moz-device-pixel-ratio: 2.5),
+      only screen and (-o-min-device-pixel-ratio: 250/100),
+      only screen and (min-device-pixel-ratio: 2.5) {
+        &{
+          -webkit-transform: scaleX(0.33333334);
+          transform: scaleX(0.33333334);
+        }
+      }
+    }@else{//只有上下边框按扭
+      width: 100%;
+      -webkit-transform: scaleY(0.5);
+      transform: scaleY(0.5);
+      /* Retina 适配 */
+      @media only screen and (-webkit-min-device-pixel-ratio: 2.0),
+      only screen and (min--moz-device-pixel-ratio: 2.0),
+      only screen and (-o-min-device-pixel-ratio: 200/100),
+      only screen and (min-device-pixel-ratio: 2.0) {
+        &{
+          -webkit-transform: scaleY(0.5);
+          transform: scaleY(0.5);
+        }
+      }
+      /* 三倍屏 适配 */
+      @media only screen and (-webkit-min-device-pixel-ratio: 2.5),
+      only screen and (min--moz-device-pixel-ratio: 2.5),
+      only screen and (-o-min-device-pixel-ratio: 250/100),
+      only screen and (min-device-pixel-ratio: 2.5) {
+        &{
+          -webkit-transform: scaleY(0.33333334);
+          transform: scaleY(0.33333334);
+        }
+      }
+    }
+
+  }
+
+}
+
+//背景图片
+@mixin background($bgUrl,$bgSite:center,$bgSize:100%,$bgRepeat:no-repeat) {
+  background: url("#{$bgUrl}") $bgRepeat $bgSite;
+  background-size: $bgSize;
+}
+
+//公用按扭button（默认红色）
+@mixin btn-basic($h:.79rem,$radiusSize:8px,$fontSize:.28rem,$bg:$zmRed,$cor:#fff,$pdSize:0 .3rem) {
+  text-align: center;
+  vertical-align: middle;
+  line-height: $h;
+  border-radius: $radiusSize;
+  height: $h;
+  font-size: $fontSize;
+  color: $cor;
+  background-color: $bg;
+  @include btnActive;
+  padding:$pdSize;
+}
+
+//伪类
+@mixin pseudo-Element {
+  display: block;
+  content: "";
+  position: absolute;
+}
+
+// 单行文字截字
+// 元素可以设置宽度才可应用省略号
+@mixin ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+//多行文字截字（改变line-clamp值）
+//@include moreEllipsis(x);
+@mixin moreEllipsis($lineNun:2) {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $lineNun;
+}
+
+//清除浮动
+//@include clearfix;
+@mixin clearfix {
+  &:before, &:after {
+    content: "";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+//模拟IOS滑动顺畅
+//@include iosScroll;
+@mixin iosScroll {
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  overflow-x: hidden
+}
+
+// 有透明背景弹出层
+//@include popMask;
+@mixin popMask() { //父级弹出层
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, .4);
+  z-index: 20000;
+}
+
+//垂直居中 可以判断 在没有高和宽的情况下用CSS3 有高和宽自动计算
+//@include center(100px,50px)
+@mixin center($width: null, $height: null) {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  @if not $width and not $height {
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  } @else if $width and $height {
+    width: $width;
+    height: $height;
+    margin: #{-($width / 2)} #{0 0} -#{($height / 2)};
+  } @else if not $height {
+    width: $width;
+    margin-left: -($width / 2);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+  } @else {
+    height: $height;
+    margin-top: -($height / 2);
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+}
+
+//定高和宽
+//@include size(100px,50px) ==> .xxx{width:100px;height:100px;}
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+//字体大小、色
+//@include fontSize(.32rem,#323232) ==> font-size:.32rem; color:#323232;
+@mixin fontSize($size: $size, $color: #333,$lineH:null,$fontB:null) {
+  font-size: $size;
+  color: $color;
+  line-height:$lineH ;
+  font-weight:$fontB ;
+}
+
+//定位
+//@include fixed(top 10px right 10px) ==> position:fixed;top:10px;right:10px;
+@mixin position($position, $args) {
+  @each $o in top right bottom left {
+    $i: index($args, $o);
+    @if $i
+    and $i + 1 <= length($args)
+    and (type-of( nth($args, $i + 1) ) == number
+    or nth($args, $i + 1) == initial
+    or nth($args, $i + 1) == inherit ) {
+      #{$o}: nth($args, $i + 1);
+    }
+  }
+  position: $position;
+}
+
+@mixin absolute($args) {
+  @include position(absolute, $args);
+}
+
+@mixin relative($args) {
+  @include position(relative, $args);
+}
+
+@mixin fixed($args) {
+  @include position(fixed, $args);
+}
+
+
+//浏览器前缀
+//@include css3(box-sizing,border-box) ==> -webkit-box-sizing:border-box;box-sizing:border-box;
+@mixin css3($property, $value) {
+  @each $prefix in -webkit- , ''{
+    #{$prefix}#{$property}: $value;
+  }
+}
+
+//Retina图片
+//@include image-2x('xx.png',30px,30px)
+//参照网址：https://www.w3cplus.com/css/the-mobile-web-css-image-replacement-for-retina-display-devices.html
+@mixin image-2x($image, $width , $height) {
+  @media (-webkit-min-device-pixel-ratio: 1.3),
+  (min-device-pixel-ratio: 1.3),
+  (min-resolution: 1.3dppx) {
+    background-image: url($image);
+    background-size: $width $height;
+  }
+}
+
+
+//Black和White 透明度
+//.xxx{background:black(0.5)} ==> .xxx{background:rgba(0,0,0,0.5}
+@function black($opacity){
+  @return rgba(0,0,0,$opacity)
+}
+//.xxx{background:white(0.5)} ==> .xxx{background:rgba(255,255,255,0.5}
+@function white($opacity){
+  @return rgba(255,255,255,$opacity)
+}
+
+
+
+//图片，视频，iframe高宽比计算
+@function aspect-ratio($h,$w){
+  @return ($w / $h) * 100%;
+}
+
+//==================================
+//20180319~~更新
+//==================================
+//1.上下边框样式
+//@mixin borde1px{  应该也要把z轴也要考虑进去
+//  transform-origin: 100%;
+//}
+//em函数--可以指定继承的font-size值，然后再计算，默认值是16px
+//demo:
+//scss:.foo { $font-size: 20; &-bar { font-size: em(12, $font-size); }}
+//css.foo {font-size: 1.25em; /* Default to 20px. */  &-bar {font-size: 0.75em; /* Default to 12px; */}}
+@function strip-units($val){
+  @return $val / ($val * 0 + 1);
+}
+$base-font-size: 16;
+@function em($px, $base-px: $base-font-size) {
+  @return strip-units($px) / $base-px * 1em;
+}
+
+//计算并列缩放后的元素调整边距(宽度必须要知道或者固定 ，除以他的位数先还原再用边距)
+@mixin calcScaleElemet($w,$multiple:2,$mar:.1rem){
+  width:$w;
+  margin-left: (-$w/$multiple) + $mar;
+}
+
+//高清图片使用方法
+@mixin bgimg-2x($url){
+  background-image: url($url + "@2x.png");
+  @media (-webkit-min-device-pixel-ratio: 3),(min-device-pixel-ratio: 3) {
+    background-image: url($url + "@3x.png");
+  }
+}
+
+

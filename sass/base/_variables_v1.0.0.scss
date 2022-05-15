@@ -1,0 +1,99 @@
+@charset "UTF-8";
+//-----------------------------------------------------
+// fontsVar.scss 全局变量样式
+// - Version: 1.0.0
+// - Author: 王超
+// - Date: 2018-03-02
+//-----------------------------------------------------
+
+//-----------------------------------------------------
+//字体
+//-----------------------------------------------------
+$baseFontFamily:                'STHeiti','Microsoft YaHei',Helvetica,Arial,sans-serif !default;//通用默认字体
+$fontCn:                        "SimSun" !default; //宋体
+$fontYaHei:                     "Microsoft Yahei" !default; //微软雅黑
+$fontHeiTi:                     "SimHei" !default; //黑体
+$fontArial:                     "Arial" !default;//英文和数字字体
+
+//-----------------------------------------------------
+//圆角大小
+//-----------------------------------------------------
+//以rem为单位
+$R_Size:                         .03rem!default;
+$R_Size_S:                       .05rem!default;
+$R_Size_M:                       .08rem!default;
+$R_Size_L:                       .1rem!default;
+$R_Size_XL:                      .15rem!default;
+$R_Size_round:                   100%!default;//正圆
+$R_Size_half:                    .5rem!default;//半圆
+//以PX为单位
+$R_px_Size:                      3px!default;
+$R_px_Size_S:                    5px!default;
+$R_px_Size_M:                    8px!default;
+$R_px_Size_L:                    10px!default;
+$R_px_Size_XL:                   15px!default;
+$R_px_Size_round:                100%!default;//正圆
+$R_px_Size_half:                 50px!default;//半圆
+
+//-----------------------------------------------------
+//字体大小
+//-----------------------------------------------------
+$F_Size:                         .24rem !default;
+$F_Size_S:                       .26rem !default;
+$F_Size_M:                       .28rem !default;
+$F_Size_L:                       .3rem !default;
+$F_Size_XL:                      .32rem !default;
+$F_Size_1XL:                     .36rem !default;
+$F_Size_XXL:                     .38rem !default;
+$F_Size_XXXL:                    .4rem !default;
+$F_Size_Big:                     .44rem !default;
+
+// -----------------------------------------------------------------------------
+// 主色
+// -----------------------------------------------------------------------------
+$zmRed:                         #f03c38 !default; //掌门红色
+$zmPrimary:                     #323232 !default; //用于标题，重要文字信息色
+$black:                         #000 !default; //黑色
+$white:                         #fff !default; //白色
+
+// -----------------------------------------------------------------------------
+// 辅助色
+// -----------------------------------------------------------------------------
+$lightred:                      #fce6e6 !default; //浅红色
+$zmRedDisabled:                 #faa6a4 !default; //禁用色
+$orange:                        #ff9600 !default; //橙色
+$lpblue   :                     #3c8cfa !default; //亮蓝
+$linkblue :                     #cce6ff !default; //浅蓝
+
+// -----------------------------------------------------------------------------
+// 较弱颜色-灰色系
+// -----------------------------------------------------------------------------
+$darkgray:                      #787878 !default; //深灰
+$zmSecondary:                   #a0a0a0 !default; //浅灰
+$subduedgray:                   #c8c8c8 !default; //
+$linkgray:                      #f5f5f5 !default; //
+
+//-----------------------------------------------------
+// z-index层级
+//-----------------------------------------------------
+$zindexDropdown:                1000 !default;//下拉
+$zindexFixedTopbar:             1010 !default;//顶栏
+$zindexTooltip:                 1020 !default;//提示
+$zindexAlert:                   1030 !default;//alert弹框
+$zindexModal:                   1100 !default;//模态框
+
+
+//-----------------------------------------------------
+// - 官网通用变量
+// - Author: 王超
+// - Date: 2018-06-09
+//-----------------------------------------------------
+$zmgw-red:              #e00000 !default;//红色
+
+
+
+
+
+
+
+

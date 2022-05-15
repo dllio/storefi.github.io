@@ -1,0 +1,15 @@
+﻿@charset "utf-8";
+//-----------------------------------------------------
+// global.scss 全局样式
+// - Version: 1.0.0
+// - Author: wangchao
+// - Date: 2010-10-24
+//-----------------------------------------------------
+//@import './base/_reset_v1.0.0';//重置样式表
+//@import './base/base.scss';//重置样式表
+@import 'base/_variables_v1.0.0.scss';//常用变量样式表
+@import 'base/_mixins_v1.0.0.scss';//常用scss功能方法
+@import 'base/_svgtodata.scss';//svg转成dataURL数据
+@import 'base/_css3.scss';//支持css3样式
+@import 'base/base.scss';//支持css3样式
+
