@@ -1,0 +1,355 @@
+@charset "UTF-8";
+@import "../sass/global.scss";
+@font-face{
+  font-family: Arvo;
+  src: url('../../fonts/Arvo-Regular-5.ttf')
+  }
+
+  @font-face{
+      font-family: MerriweatherSans;
+      src: url('../../fonts/MerriweatherSans-Regular.ttf')
+      }
+      @font-face{
+        font-family: VoltaireRegular;
+        src: url('../../fonts/Voltaire-Regular-webfont.woff.ttf')
+        }
+
+.Arvo{
+  font-family: Arvo;
+} 
+.MerriweatherSans{
+  font-family: MerriweatherSans;
+}
+.VoltaireRegular{
+font-family: VoltaireRegular;
+}
+// body{
+//   min-height: 300vh;
+//   width: 100%;
+// }
+
+.g-footer{
+  // position: fixed;
+  // bottom: 0;
+  // left: 0;
+  // right: 0;
+  width: 100%;
+}
+
+.PagesTit{
+  text-align: center;
+  margin-bottom: .85rem;
+  h2{
+    display:inline-block;
+    @extend .Arvo;
+    font-weight: bold;
+    font-size: .35rem;
+    color: #2c4058;
+    position: relative;
+    &::after{
+      content: "";
+      width: 3rem;
+      height: 5px;
+     
+      position: absolute;
+      left: 50%;
+      top: .55rem;
+      margin-left: -(3rem / 2);
+      border-radius: 5px;
+
+    }
+    &.red::after{
+      background-color: #ea5455;
+    }
+    &.yellow::after{
+      background-color: #ffd55f;
+    }
+  }
+ 
+}
+
+.container-sy{
+  margin:.8rem  auto;
+}
+.box-A{
+  padding-bottom: .8rem;
+  .box-A-fl{
+    width: 39%;
+  }
+  .tit{
+    @extend .VoltaireRegular;
+    color: #ec5355;
+    font-size: .24rem;
+    margin-bottom: .15rem;
+    font-weight: bold;
+  }
+  .cont{
+    @extend .Arvo;
+    color:#2f4159;
+    line-height: 1.5;
+    font-weight: bold;
+    font-size: .45rem;
+    margin-bottom: .15rem;
+  }
+  .link{
+    cursor: pointer;
+    background: linear-gradient(236.02deg, #D1B055 4.74%, #EA5455 95.26%);
+    border-radius: 10px;
+    @extend .MerriweatherSans;
+    font-size: .14rem;
+    color: #fff;
+    text-align: center;
+    padding: .1rem .5rem;
+    display: inline-block;
+  }
+  .box-A-fr{
+    width: 40%;
+    img{
+      max-width: 100%;
+    }
+
+  }
+}
+.box-B{
+  padding: .8rem 0;
+  border-top: 1px solid #ea5456;
+  background-color: #f6f6f6;
+ .list{
+   li{
+     width: 20%;
+     img{
+       width:100%;
+       display: block;
+       margin-bottom: .45rem;
+     }
+     .childTit{
+       @extend .Arvo;
+       color: #ec5453;
+       font-weight: bold;
+       font-size: .22rem;
+       margin-bottom: .15rem;
+     }
+     .cont{
+      @extend .MerriweatherSans;
+      color:#2e3f59;
+      line-height: 1.5;
+      font-weight: 600;
+      font-size: .18rem;
+      margin-bottom: .15rem;
+      a{
+        font-weight: bold;
+        text-decoration:underline;
+        color:#2e3f59;
+      }
+    }
+   }
+ }
+}
+
+
+.box-C{
+  padding: .8rem 2%;
+ .list{
+   li{
+     width: 18%;
+     padding-right: .1rem;
+     &:last-of-type{
+       margin-right: 0;
+     }
+     img{
+       width:.4rem;
+       display: block;
+       margin-bottom: .25rem;
+     }
+     .childTit{
+       @extend .VoltaireRegular;
+       color: #ec5453;
+       font-weight: bold;
+       font-size: .22rem;
+       margin-bottom: .15rem;
+     }
+     .cont{
+      @extend .MerriweatherSans;
+      color:#2e3f59;
+      line-height: 1.5;
+      font-weight: 600;
+      font-size: .18rem;
+      margin-bottom: .15rem;
+      a{
+        font-weight: bold;
+        text-decoration:underline;
+        color:#2e3f59;
+      }
+    }
+   }
+ }
+}
+
+.box-D{
+  background-color: #f6f6f6;
+  padding: .8rem 2%;
+  .pic{
+    img{
+      width: 100%;
+    }
+  }
+}
+
+
+.box-E{
+  padding: .8rem 0;
+  .pic{
+    background: url(../images/storefl_time.png) no-repeat center;
+    background-size: auto 90%;
+    height: 6rem;
+  }
+}
+
+.box-F{
+  background-color: #f6f6f6;
+  padding: .8rem 0;
+  .list{
+    text-align: center;
+    li{
+      display: inline-block;
+      margin: 0 .35rem .35rem;
+      width: 15%;
+      img{
+        width: 100%;
+      }
+    }
+  }
+}
+
+.box-G{
+  padding: .8rem 0;
+  .box-G-fl{
+    width: 20%;
+    img{
+      width: 100%;
+    }
+  }
+  .box-G-fr{
+    width: 65%;
+  }
+  .tit{
+    @extend .VoltaireRegular;
+    color: #ec5355;
+    font-size: .24rem;
+    margin-bottom: .15rem;
+    font-weight: bold;
+  }
+  .cont{
+    @extend .Arvo;
+    color:#2f4159;
+    line-height: 1.5;
+    font-weight: bold;
+    font-size: .45rem;
+    margin-bottom: .15rem;
+  }
+  .form{
+    margin-top: .15rem;
+     input[type="text"]{
+       background-color: #2e3f59;
+       border-radius: 8px;
+       border: none;
+       padding: .1rem;
+       display: block;
+       @extend .MerriweatherSans;
+       font-size: .14rem;
+       color: #fff;
+     }
+     .submit{
+       background-color: #ea5455;
+       color: #fff;
+       font-size: .14rem;
+       border-radius: 8px;
+       display: block;
+       padding: .1rem .5rem;
+       margin-left: .3rem;
+       @extend .MerriweatherSans
+     }
+
+  }
+}
+
+
+//   移动端
+.device-mobile{
+  
+  .box-A{
+    display: block;
+    .box-A-fl{
+      width: 80%;
+      margin: 0 auto .25rem;
+    }
+    .box-A-fr{
+      width: 60%;
+      margin: 0 auto;
+    }
+  }
+  .box-B{
+    .list{
+      display: block;
+      li{
+        width: 80%;
+        margin: 0 auto .8rem;
+        &:last-of-type{
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+  .box-C{
+    .list{
+      display: block;
+      li{
+        width: 80%;
+        margin: 0 auto .5rem;
+        &:last-of-type{
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+  .box-D{
+    .pic{
+      width: 90%;
+      margin: 0 auto;
+
+    }
+  }
+  .box-E{
+    .pic{
+      width: 90%;
+      background-size: 100%;
+      height: 3rem;
+      margin: 0 auto;
+    }
+  }
+  .box-F{
+    .list{
+
+      li{
+        margin: 0 0.1rem 0.15rem;
+        width: 27%;
+      }
+    }
+  }
+  .box-G{
+    display:block;
+    .box-G-fl,.box-G-fr{
+      width: 80%;
+      margin: 0 auto;
+    }
+    .box-G-fl{
+      margin-bottom: .35rem;
+    }
+    
+  }
+  
+  
+  
+}
+
+

@@ -1,0 +1,435 @@
+@charset "UTF-8";
+a, em, u {
+  text-decoration: none;
+  font-style: normal;
+  font-weight: normal;
+}
+
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+  font-style: normal;
+}
+
+body, ul, li, p, nav, footer, section, header, article, figure, figcaption, aside, hgroup, div, dl, dt, dd, button, h1, h2, h3, h4, h5, h6, img, cite, table, td, th, menu {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  text-align: left;
+  line-height: normal;
+  list-style-type: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-box-sizing: border-box;
+}
+
+a {
+  color: #007aff;
+}
+
+img {
+  vertical-align: top;
+}
+
+i, em, u {
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: none;
+  -webkit-box-sizing: border-box;
+}
+
+a,
+img {
+  -webkit-touch-callout: none;
+  /* 禁止长按链接与图片弹出菜单 */
+}
+
+.pubFlex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/*普通flex布局 */
+.autoFlex {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+      flex: 1;
+}
+
+/*宽度自动伸缩*/
+.a_center {
+  display: -webkit-box;
+  /*控制元素绝对居中			 */
+  -webkit-box-align: center;
+  -webkit-box-pack: center;
+}
+
+.oneline_text {
+  overflow: hidden;
+  /*单行文字溢出用点显示			 */
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.twoline_text, .threeline_text {
+  overflow: hidden;
+  display: -webkit-box;
+  /*两行文字溢出用点显示	 		 */
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.threeline_text {
+  -webkit-line-clamp: 3;
+  /*三行文字溢出用点显示(改变clamp即可)*/
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.pr {
+  position: relative;
+}
+
+.pa {
+  position: absolute;
+}
+
+.pf {
+  position: fixed;
+}
+
+.tal {
+  text-align: left;
+}
+
+.tac {
+  text-align: center;
+}
+
+.tar {
+  text-align: right;
+}
+
+.clr {
+  clear: both;
+}
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: ".";
+  clear: both;
+  height: 0;
+  overflow: hidden;
+}
+
+.cent {
+  margin: 0 auto;
+  clear: both;
+}
+
+.fs10 {
+  font-size: 1rem;
+}
+
+.fs12 {
+  font-size: 1.2rem;
+}
+
+.fs14 {
+  font-size: 1.4rem;
+}
+
+.fs16 {
+  font-size: 1.6rem;
+}
+
+.fs18 {
+  font-size: 1.8rem;
+}
+
+.fs20 {
+  font-size: 20rem;
+}
+
+.lh20 {
+  line-height: 2;
+}
+
+.lh15 {
+  line-height: 1.5;
+}
+
+.display-flex {
+  display: -webkit-box;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.display-flex__inline {
+  display: -webkit-inline-box;
+  display: -moz-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.flex-flow {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row wrap;
+      flex-flow: row wrap;
+}
+
+.flex-flow-col {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column wrap;
+      flex-flow: column wrap;
+}
+
+.justify-content__center {
+  -webkit-box-pack: center;
+  -moz-justify-content: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+}
+
+.justify-content__between {
+  -moz-justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.justify-content__around {
+  -moz-justify-content: space-around;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.align-items__center {
+  -webkit-box-align: center;
+  -moz-align-items: center;
+  -ms-flex-align: center;
+      align-items: center;
+}
+
+.align-items__end {
+  -webkit-box-align: end;
+  -moz-align-items: flex-end;
+  -ms-flex-align: end;
+      align-items: flex-end;
+}
+
+.align-items__stretch {
+  -webkit-box-align: stretch;
+  -moz-align-items: stretch;
+  -ms-flex-align: stretch;
+      align-items: stretch;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+font-face {
+  font-family: Arvo;
+  src: url("../../fonts/Arvo-Regular-5.ttf");
+}
+
+@font-face {
+  font-family: MerriweatherSans;
+  src: url("../../fonts/MerriweatherSans-Regular.ttf");
+}
+
+@font-face {
+  font-family: VoltaireRegular;
+  src: url("../../fonts/Voltaire-Regular-webfont.woff.ttf");
+}
+
+.Arvo, .pages-tit {
+  font-family: Arvo;
+}
+
+.MerriweatherSans, .pages-btns, .page-talbe .table > tbody > tr > td {
+  font-family: MerriweatherSans;
+}
+
+.VoltaireRegular, .pages-subtit, .page-talbe .table > thead > tr > th, .page-topInfo .tips-rt {
+  font-family: VoltaireRegular;
+}
+
+.table td, .table th {
+  text-align: center;
+  font-size: 16px;
+  vertical-align: middle !important;
+  border-color: rgba(0, 0, 0, 0.12);
+  color: #6b6f82;
+  padding: .2rem;
+}
+
+.table > thead > tr > th {
+  color: #6b6f82;
+  font-size: .24rem;
+}
+
+.table.tableLeft td, .table.tableLeft th {
+  text-align: left;
+}
+
+.pages-header {
+  text-align: center;
+  padding: .45rem 0;
+}
+
+.pages-header .pages-btns {
+  margin: .25rem 0;
+}
+
+.pages-tit {
+  font-size: .36rem;
+  font-weight: bold;
+  color: #2d4059;
+  text-align: center;
+}
+
+.pages-btns {
+  cursor: pointer;
+  background: linear-gradient(236.02deg, #D1B055 4.74%, #EA5455 95.26%);
+  border-radius: 10px;
+  font-size: .14rem;
+  color: #fff;
+  text-align: center;
+  padding: .1rem .5rem;
+  display: inline-block;
+}
+
+.pages-subtit {
+  font-size: .14rem;
+  color: #ea5455;
+}
+
+.pages-subtit01 {
+  margin-bottom: .6rem;
+}
+
+.pages-btns01 {
+  margin-bottom: .35rem;
+}
+
+.page-footerPic {
+  width: 30%;
+  margin: 0 auto;
+  padding: .35rem 0;
+}
+
+.page-footerPic img {
+  width: 100%;
+}
+
+.page-talbe {
+  margin-bottom: .5rem;
+}
+
+.page-talbe .table > thead > tr > th, .page-talbe .table > tbody > tr > td {
+  text-align: left;
+}
+
+.page-talbe .table > thead > tr > th {
+  font-weight: bold;
+  color: #2d4059;
+  font-size: .24rem;
+  background-color: #ffd460;
+  border-bottom: none;
+}
+
+.page-talbe .table > thead > tr > th:first-of-type {
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+.page-talbe .table > thead > tr > th:last-of-type {
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.page-talbe .table > tbody > tr > td {
+  color: #2d4059;
+  font-size: .18rem;
+  border-bottom: 1px solid #7c8797;
+}
+
+.page-topInfo {
+  margin-bottom: .35rem;
+}
+
+.page-topInfo .pages-btns {
+  display: block;
+  margin-bottom: 0;
+}
+
+.page-topInfo .tips-rt {
+  font-size: .18rem;
+  color: #2d4059;
+}
+
+.container-main {
+  padding: 0 0 1rem;
+}
+
+.pagerBox .pager > li.previous > a, .pagerBox .pager > li.next > a {
+  border-radius: 100%;
+  border: 1px solid #2d4059;
+  width: 32px;
+  height: 32px;
+  text-align: center;
+  color: #2d4059;
+}
+
+.pagerBox .pager > li > a, .pagerBox .pager > li > span {
+  background-color: transparent;
+  border: none;
+  color: #2d4059;
+}
+
+.pagerBox .pager > li.active > a, .pagerBox .pager > li.active > a:hover, .pagerBox .pager > li.active > span, .pagerBox .pager > li.active > span:hover {
+  color: #ea5455;
+  background-color: transparent;
+  border: none;
+}
+
+.device-mobile .container-main {
+  padding: 0 .35rem .5rem;
+  width: 100%;
+}
+
+.device-mobile .Mobile-table {
+  width: 100%;
+  overflow: hidden;
+  overflow-x: scroll;
+}
+
+.device-mobile .Mobile-table .table {
+  width: 1400px;
+}
+
+.device-mobile .page-footerPic {
+  width: 50%;
+}
+/*# sourceMappingURL=style.css.map */

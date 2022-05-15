@@ -1,0 +1,336 @@
+@charset "UTF-8";
+@import "../sass/global.scss";
+
+body{
+  // background: linear-gradient(top, #002728, #010f10);
+  // background: -webkit-linear-gradient(top,#002728, #010f10);
+  min-height: 100vh;
+  width: 100%;
+  background: #010f10;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #002c2d, #010f10);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #002c2d, #010f10); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
+}
+
+// 动态背景效果
+
+
+body:after {
+	content: '';
+	display: block;
+	position: fixed;
+	width: 1px;
+	height: 1px;
+	border-radius: 50%;
+	opacity: .18
+}
+
+body:after {
+	box-shadow: 0 0 35vmax 35vmax #0ff;
+	animation: hue 10s 0s linear infinite, move2 20s 0s linear infinite
+}
+
+@-moz-keyframes hue {
+	0% {
+		filter: hue-rotate(0deg)
+	}
+
+	100% {
+		filter: hue-rotate(360deg)
+	}
+}
+
+@-webkit-keyframes hue {
+	0% {
+		filter: hue-rotate(0deg)
+	}
+
+	100% {
+		filter: hue-rotate(360deg)
+	}
+}
+
+@-o-keyframes hue {
+	0% {
+		filter: hue-rotate(0deg)
+	}
+
+	100% {
+		filter: hue-rotate(360deg)
+	}
+}
+
+@keyframes hue {
+	0% {
+		filter: hue-rotate(0deg)
+	}
+
+	100% {
+		filter: hue-rotate(360deg)
+	}
+}
+
+@-moz-keyframes move1 {
+	0% {
+		top: 0vh;
+		left: 50vw
+	}
+
+	25% {
+		left: 0vw
+	}
+
+	50% {
+		top: 100vh
+	}
+
+	75% {
+		left: 100vw
+	}
+
+	100% {
+		top: 0vh;
+		left: 50vw
+	}
+}
+
+@-webkit-keyframes move1 {
+	0% {
+		top: 0vh;
+		left: 50vw
+	}
+
+	25% {
+		left: 0vw
+	}
+
+	50% {
+		top: 100vh
+	}
+
+	75% {
+		left: 100vw
+	}
+
+	100% {
+		top: 0vh;
+		left: 50vw
+	}
+}
+
+@-o-keyframes move1 {
+	0% {
+		top: 0vh;
+		left: 50vw
+	}
+
+	25% {
+		left: 0vw
+	}
+
+	50% {
+		top: 100vh
+	}
+
+	75% {
+		left: 100vw
+	}
+
+	100% {
+		top: 0vh;
+		left: 50vw
+	}
+}
+
+@keyframes move1 {
+	0% {
+		top: 0vh;
+		left: 50vw
+	}
+
+	25% {
+		left: 0vw
+	}
+
+	50% {
+		top: 100vh
+	}
+
+	75% {
+		left: 100vw
+	}
+
+	100% {
+		top: 0vh;
+		left: 50vw
+	}
+}
+
+@-moz-keyframes move2 {
+	0% {
+		top: 50vh;
+		left: 100vw
+	}
+
+	25% {
+		top: 100vh
+	}
+
+	50% {
+		left: 0vw
+	}
+
+	75% {
+		top: 0vh
+	}
+
+	100% {
+		top: 50vh;
+		left: 100vw
+	}
+}
+
+@-webkit-keyframes move2 {
+	0% {
+		top: 50vh;
+		left: 100vw
+	}
+
+	25% {
+		top: 100vh
+	}
+
+	50% {
+		left: 0vw
+	}
+
+	75% {
+		top: 0vh
+	}
+
+	100% {
+		top: 50vh;
+		left: 100vw
+	}
+}
+
+@-o-keyframes move2 {
+	0% {
+		top: 50vh;
+		left: 100vw
+	}
+
+	25% {
+		top: 100vh
+	}
+
+	50% {
+		left: 0vw
+	}
+
+	75% {
+		top: 0vh
+	}
+
+	100% {
+		top: 50vh;
+		left: 100vw
+	}
+}
+
+@keyframes move2 {
+	0% {
+		top: 50vh;
+		left: 100vw
+	}
+
+	25% {
+		top: 100vh
+	}
+
+	50% {
+		left: 0vw
+	}
+
+	75% {
+		top: 0vh
+	}
+
+	100% {
+		top: 50vh;
+		left: 100vw
+	}
+}
+
+
+.head-body{
+  $h:80vh;
+  padding-top: 1.5rem;
+  clear: both;
+  min-height: $h;
+  @at-root .head-body-hd{
+    background: url('../images/blindbox_13.png') no-repeat center /auto $h;
+    height: $h;
+    margin-bottom: .35rem;
+    .box{
+      text-align: center;
+    }
+    .pic{
+      height: 30vh;
+    }
+    .link{
+      display: block;
+      margin-top: .2rem;
+      transition: .5s;
+      opacity: 1;
+      &:hover{
+        opacity: .85;
+      }
+      img{
+        text-align: center;
+        height: 8vh;
+      }
+    }
+  }
+}
+
+
+.head-body-foot{
+  height: 40vh;
+  padding-bottom: 4rem;
+  background: url('../images/blindbox_03.png') no-repeat bottom center / auto 36vh;
+  .tit{
+    text-align: center;
+    color: #fff;
+    font-size: .35rem;
+    font-family: GOTHIC;
+    font-weight: bold;
+    
+  }
+}
+
+
+//   移动端
+.device-mobile{
+  // .矩形_5 {
+  //   border-radius: 100px;
+  //   background-image: -moz-linear-gradient( 0deg, rgb(0,166,114) 0%, rgb(0,228,47) 100%);
+  //   background-image: -webkit-linear-gradient( 0deg, rgb(0,166,114) 0%, rgb(0,228,47) 100%);
+  //   background-image: -ms-linear-gradient( 0deg, rgb(0,166,114) 0%, rgb(0,228,47) 100%);
+  //   position: absolute;
+  //   left: 184px;
+  //   top: 206px;
+  //   width: 1553px;
+  //   height: 391px;
+  //   z-index: 2;
+  // }
+  .head-body-hd{
+    background:transparent;
+    height: 50vh;
+  }
+  .head-body-foot{
+    background-size: 100%;
+    padding-bottom: 0;
+    height: 20vh;
+  }
+}

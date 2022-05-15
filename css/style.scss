@@ -1,0 +1,175 @@
+@charset "UTF-8";
+@import "../sass/global.scss";
+
+font-face{
+  font-family: Arvo;
+  src: url('../../fonts/Arvo-Regular-5.ttf')
+  }
+
+  @font-face{
+      font-family: MerriweatherSans;
+      src: url('../../fonts/MerriweatherSans-Regular.ttf')
+      }
+      @font-face{
+        font-family: VoltaireRegular;
+        src: url('../../fonts/Voltaire-Regular-webfont.woff.ttf')
+        }
+
+.Arvo{
+  font-family: Arvo;
+} 
+.MerriweatherSans{
+  font-family: MerriweatherSans;
+}
+.VoltaireRegular{
+font-family: VoltaireRegular;
+}
+.table{
+  td,th{text-align: center;font-size:16px;vertical-align: middle!important;border-color: rgba(0,0,0,.12);color:#6b6f82;padding: .2rem;}
+  >thead>tr>th{
+    color:#6b6f82;
+    font-size: .24rem;
+  }
+}
+.table.tableLeft{
+  td,th{text-align: left;}
+}
+
+.pages-header{
+  text-align: center;padding: .45rem 0;
+  .pages-btns{
+    margin: .25rem 0;
+  }
+}
+.pages-tit{
+  @extend .Arvo;
+  font-size: .36rem;
+  font-weight: bold;
+  color: #2d4059;
+  text-align: center;
+}
+.pages-btns{
+  cursor: pointer;
+  background: linear-gradient(236.02deg, #D1B055 4.74%, #EA5455 95.26%);
+  border-radius: 10px;
+  @extend .MerriweatherSans;
+  font-size: .14rem;
+  color: #fff;
+  text-align: center;
+  padding: .1rem .5rem;
+  display: inline-block;
+}
+.pages-subtit{
+  @extend .VoltaireRegular;
+  font-size: .14rem;
+  color: #ea5455;
+
+}
+.pages-subtit01{
+  margin-bottom: .6rem;
+
+
+}
+.pages-btns01{
+  margin-bottom: .35rem;
+}
+.page-footerPic{
+  width: 30%;
+  margin: 0 auto;
+  padding: .35rem 0;
+  img{
+    width: 100%;
+  }
+}
+.page-talbe{
+    margin-bottom: .5rem;
+    .table>thead>tr>th,.table>tbody>tr>td{
+      text-align: left;
+    }
+
+    .table>thead>tr>th{
+      @extend .VoltaireRegular;
+      font-weight: bold;
+      color: #2d4059;
+      font-size: .24rem;
+      background-color: #ffd460;
+      border-bottom:none;
+       }
+       .table>thead>tr>th:first-of-type{
+        border-bottom-left-radius: 10px;
+        border-top-left-radius: 10px;
+       }
+       .table>thead>tr>th:last-of-type{
+        border-bottom-right-radius: 10px;
+        border-top-right-radius: 10px;
+         
+      }
+    .table>tbody>tr>td{
+      @extend .MerriweatherSans;
+      color: #2d4059;
+      font-size: .18rem;
+      border-bottom:1px solid #7c8797;
+    }
+}
+.page-topInfo{
+  margin-bottom: .35rem;
+  .pages-btns{
+    display: block;
+    margin-bottom: 0;
+  }
+  .tips-rt{
+    @extend .VoltaireRegular;
+    font-size: .18rem;
+    color: #2d4059;
+    
+  }
+}
+.container-main {
+  padding: 0 0 1rem;
+
+}
+
+// 分页
+.pagerBox{
+  .pager>li.previous>a,.pager>li.next>a{
+    border-radius: 100%;
+    border: 1px solid #2d4059;
+    width: 32px; 
+    height: 32px;
+    text-align: center;
+    color: #2d4059;
+  }
+  .pager>li>a, .pager>li>span{
+    background-color: transparent;
+    border: none;
+    color: #2d4059;
+  }
+  .pager>li.active>a, .pager>li.active>a:hover, .pager>li.active>span, .pager>li.active>span:hover{
+    color: #ea5455;
+    background-color: transparent;
+    border: none;
+  }
+
+}
+
+
+
+// 移动端
+.device-mobile{
+  .container-main{
+    padding: 0 .35rem .5rem;
+    width: 100%;
+  }
+  .Mobile-table{
+    width: 100%;
+    overflow: hidden;
+    overflow-x: scroll;
+    .table{
+       width: 1400px;
+    }
+  }
+  .page-footerPic{
+    width: 50%;
+  }
+}
+
