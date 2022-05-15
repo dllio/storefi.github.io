@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>StoreFi</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+  <link href="zui/css/zui.min.css" rel="stylesheet" type="text/css">
+  <link href="css/common/base.css" rel="stylesheet" type="text/css">
+  <link href="css/index.css" rel="stylesheet" type="text/css">
+  <link rel="shortcut icon" href="/nfthorse.ico" type="image/x-icon" />
+
+  <script src="libs/jquery-3.5.1.min.js"></script>
+  <script src="zui/js/zui.min.js"></script>
+  <script src="js/font.js"></script>
+  <script src="js/common.js"></script>
+
+</head>
+
+<body>
+  <div class="mobileXuniH hide"></div>
+  <div class="mobileHeader hide">
+    <div class="g-logo"><img src="images/logo.png"></div>
+    <div class="isToggle" onclick="fnIsToggle()"><img src="images/istoggle.png"></div>
+  </div>
+
+  <div class="sy-menu" id="sy-menu">
+    <div class="sy-close" onclick="fnClose()"><img src="images/close.png"></div>
+    <nav class="menu-list">
+      <li><a href="index.html" class="active">HOME</a></li>
+      <li><a href="DEVELOPER.html">DEVELOPER</a></li>
+      <li><a href="GUILD.html">GUILD</a></li>
+      <li><a href="PLAYER.html">PLAYER</a>
+     
+      </li>
+      <li><a href="COMMUNITY.html">COMMUNITY</a></li>
+    </nav>
+  </div>
+
+  <!--g-header-->
+  <header class="g-header" id="g-header">
+    <div class="g-header-box">
+      <div class="g-logo pubFlex align-items__center justify-content__center"><img src="images/logo.png"></div>
+      <ul class="g-menus pubFlex">
+        <li><a href="index.html" class="active">HOME</a></li>
+        <li><a href="DEVELOPER.html">DEVELOPER</a></li>
+        <li><a href="GUILD.html">GUILD</a></li>
+        <li class="PLAYER"><a href="PLAYER.html">PLAYER <i class="icon icon-chevron-down"></i></a>
+          <ul class="childList">
+            <li><a href="#">MARKET</a></li>
+            <li><a href="#">EXCHANGE</a></li>
+            <li><a href="#">MINING</a></li>
+          </ul>
+        </li>
+        <li><a href="COMMUNITY.html">COMMUNITY</a></li>
+      </ul>
+      <!-- <div class="g-header-other fr pubFlex align-items__center justify-content__center">
+        <div class="bell">
+          <i class="icon icon-bell"></i>
+          <span class="number">5</span>
+        </div>
+        <div class="toux"><div class="green"></div><img src="https://tse1-mm.cn.bing.net/th/id/R-C.7620de27ee028d5dcb39a88159cbf315?rik=5YICN2bLd66UKw&riu=http%3a%2f%2fimg.crcz.com%2fallimg%2f202001%2f07%2f1578387974140589.jpg&ehk=%2fOTVWaycQYGi%2bifdrOEnHw44GX%2bDAHTFED%2fTayx7Jfo%3d&risl=&pid=ImgRaw&r=0&sres=1&sresct=1"></div>
+      </div> -->
+      <div class="fr g-header-btn"  type="button"><img src="images/btns.png"></button>
+     
+    </div>
+  </header>
+
+
+   <!-- container-sy -->
+   <div class="container-sy">
+     <div class="box-A clearfix pubFlex justify-content__between align-items__center g-1400">
+       <div class="box-A-fl">
+         <h2 class="tit">From a developer community of 600,000</h2>
+         <p class="cont">Decentralized based 
+          on DAO Application 
+          Distribution Engine!</p>
+          <div class="link">WHITEPAPER</div>
+       </div>
+       <div class="box-A-fr"><img src="images/storefl_03.png"></div>
+     </div>
+     <div class="box-B clearfix ">
+      <div class="PagesTit"><h2 class="red">CHOOSE YOU CATEGORY</h2></div>
+      <ul class="list pubFlex justify-content__around g-1400">
+        <li>
+          <img src="images/storefl_07.png">
+          <h3 class="childTit">I am a developer</h3>
+          <p class="cont">I focus on developer applications and games. 
+           No need to worry about experience, just 
+           introduce SDK and contract to set the share ratio. 
+           <a href="javascript:void(0)">Request Token</a></p>
+        </li>
+        <li>
+         <img src="images/storefl_10.png">
+         <h3 class="childTit">I am a guild</h3>
+         <p class="cont">I am a gaming guild with a large number 
+           of players. Just keep recommending the 
+           platform's games, all the app revenue 
+           is related to me.  <a href="javascript:void(0)">Request Token</a></p>
+       </li>
+       <li>
+         <img src="images/storefl_12.png">
+         <h3 class="childTit">I am a financial player</h3>
+         <p class="cont">I can invest in games, participate in game 
+           design and planning, and I can vote on 
+           game development iterations. 
+           <a href="javascript:void(0)">Enter the community</a></p>
+       </li>
+      </ul>
+    </div>
+    <div class="box-C clearfix ">
+      <div class="PagesTit"><h2 class="yellow">CONTRACT SDK</h2></div>
+      <ul class="list pubFlex justify-content__around g-1400">
+        <li>
+          <img src="images/storefl_29.png">
+          <h3 class="childTit">Share Contract</h3>
+          <p class="cont">Track game revenue and share according to the rules of the contract: developers, guilds, players.</p>
+        </li>
+        <li>
+          <img src="images/storefl_18.png">
+          <h3 class="childTit">Trading Contract</h3>
+          <p class="cont">The developer application can refer to the transaction contract in the game to conduct transactions between players, and the relevant parties can obtain a share of the handling fee. </p>
+        </li>
+        <li>
+          <img src="images/storefl_20.png">
+          <h3 class="childTit">Lease Contract</h3>
+          <p class="cont">Developers and guilds can lease NFT vouchers, and players can also lease virtual assets in the game to obtain income.</p>
+        </li>
+        <li>
+          <img src="images/storefl_26.png">
+          <h3 class="childTit">Cross-chain Exchange Contract</h3>
+          <p class="cont">The developer's application is not limited to chains such as ETH and BSC, and cross-chain assets can be exchanged or transferred based on this contract.</p>
+        </li>
+        <li>
+          <img src="images/storefl_23.png">
+          <h3 class="childTit">Voting Contract</h3>
+          <p class="cont">In order to allow the platform to grow and develop, the token holders update and iterate on various rules based on the constraints of this voting contract.</p>
+        </li>
+       
+      </ul>
+    </div>
+    <div class="box-D clearfix">
+      <div class="PagesTit"><h2 class="yellow">NEW ECONOMY GUILD</h2></div>
+      <div class="pic g-1400"><img src="images/storefl_37.png"></div>
+    </div>
+    <div class="box-E clearfix">
+      <div class="PagesTit"><h2 class="yellow">TIMELINE</h2></div>
+      <div class="pic"></div>
+    </div>
+    <div class="box-F clearfix">
+      <div class="PagesTit"><h2 class="red">INVESTORS</h2></div>
+      <ul class="list g-1400">
+        <li><img src="images/storefl_41.png"></li>
+        <li><img src="images/storefl_44.png"></li>
+        <li><img src="images/storefl_46.png"></li>
+        <li><img src="images/storefl_48.png"></li>
+        <li><img src="images/storefl_55.png"></li>
+        <li><img src="images/storefl_57.png"></li>
+        <li><img src="images/storefl_59.png"></li>
+        <li><img src="images/storefl_61.png"></li>
+        <li><img src="images/storefl_63.png"></li>
+      </ul>
+    </div>
+    <div class="box-G clearfix pubFlex justify-content__between align-items__center g-1400">
+      <div class="box-G-fl"><img src="images/storefl_70.png"></div>
+      <div class="box-G-fr">
+        <h2 class="tit">You have questions? You want more?</h2>
+        <p class="cont">Subscribe to our newsletter and we will send you latest informations, new promos and best options!
+          Your future is only one click away.</p>
+         <div class="form pubFlex align-items__center">
+           <input type="text" placeholder="Insert your e-mail here" class="autoFlex">
+           <a href="###" class="submit">SUBSCRIBE</a>
+         </div>
+      </div>
+     
+    </div>
+   </div>
+   
+  
+
+  <div class="g-footer pubFlex align-items__center justify-content__between">
+    <div class="info">Copyright 2022, StoreFi</div>
+    <ul class="share pubFlex align-items__center justify-content__center">
+      <li><a href="#"><img src="images/storefl_74.png"></a></li>
+      <li><a href="#"><img src="images/storefl_76.png"></a></li>
+      <li><a href="#"><img src="images/storefl_78.png"></a></li>
+      <li><a href="#"><img src="images/storefl_80.png"></a></li>
+      <li><a href="#"><img src="images/storefl_82.png"></a></li>
+      <li><a href="#"><img src="images/storefl_84.png"></a></li>
+      <li><a href="#"><img src="images/storefl_86.png"></a></li>
+      <li><a href="#"><img src="images/storefl_88.png"></a></li>
+      <li><a href="#"><img src="images/storefl_90.png"></a></li>
+      <li><a href="#"><img src="images/storefl_92.png"></a></li>
+      <li><a href="#"><img src="images/storefl_94.png"></a></li>
+    </ul>
+  </div>
+  <script type="text/javascript">
+
+
+
+    $(function () {
+      fnTopMenu();
+      window.onscroll = function () {
+        fnTopMenu();
+    }
+      
+      $("#elementor-item").find("li").hover(function () {
+        $(this).find(".stage").addClass("active");
+      })
+    });
+    function fnIsToggle() {
+      $("#sy-menu").addClass("active");
+    }
+    function fnClose() {
+      $("#sy-menu").removeClass("active");
+    }
+
+
+   
+
+    function fnTopMenu(){
+      var t = document.documentElement.scrollTop || document.body.scrollTop; //变量t就是滚动条滚动时，到顶部的距离
+
+      var left = document.getElementById("g-header"); 
+      if (t >= 80) {     //当拖动到距离顶部100px处时，左边导航固定，不随滚动条滚动
+
+        left.style.background = "#fff"; 
+
+      } else {
+
+        left.style.background = "#fff"; 
+
+      }
+    
+    }
+
+  </script>
+</body>
+
+</html>
